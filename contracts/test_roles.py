@@ -62,3 +62,18 @@ def test_a_role_claim_cannot_override_the_current_database_role(client, settings
     client.cookies.set(settings.cookie_name, altered)
     assert client.get("/api/admin").status_code == 403
     assert client.get("/api/me").json()["role"] == "member"
+
+
+def test_admin_confirmation_is_not_disclosed_to_a_member(client, settings):
+    """Denied HTML must not embed protected content behind hidden navigation."""
+    member(client)
+    denied = client.get("/admin")
+    assert denied.status_code == 403
+    assert "Admin access confirmed" not in denied.text
+    assert 'href="/admin"' not in client.get("/dashboard").text
+    assert database.set_role(settings, "learner", "admin")
+    assert "Admin access confirmed" in client.get("/admin").text
+    assert 'href="/admin"' in client.get("/dashboard").text
+    assert database.set_role(settings, "learner", "member")
+    assert "Admin access confirmed" not in client.get("/admin").text
+    assert 'href="/admin"' not in client.get("/dashboard").text

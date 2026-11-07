@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Admin space' if user else 'Admin access required' }} · {{ brand.name }}{% endblock %}
+{% block content %}
+<section class="panel admin-panel" aria-labelledby="admin-title">
+  {% if user %}
+  <p class="eyebrow">TaskNest administration</p>
+  <h1 id="admin-title">Administration</h1>
+  <p>Admin access confirmed for <strong>{{ user.username }}</strong>.</p>
+  <p>This area is reserved for administrators. Your member dashboard is also available.</p>
+  {% else %}
+  <p class="eyebrow">This space has a different role</p>
+  <h1 id="admin-title">Admin access required</h1>
+  <p role="alert">You're logged in, but your account does not have permission to access this area.</p>
+  {% endif %}
+  <a class="button" href="/dashboard">Return to Member space</a>
+</section>
+{% endblock %}
