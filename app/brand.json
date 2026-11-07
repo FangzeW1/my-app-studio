@@ -1,16 +1,11 @@
 {
-  "name": "Your Project",
-  "audience": "Not chosen yet",
-  "archetype": "Not chosen yet",
-  "promise": "Not chosen yet",
-  "headline": "A small idea. A real application.",
-  "summary": "This working page is your starting point. Give it a purpose and a brand, then build accounts and permissions one feature at a time.",
-  "voice": ["Not chosen yet"],
-  "design_direction": "Not chosen yet",
-  "palette": {
-    "ink": "#182C34",
-    "paper": "#F6F5EF",
-    "accent": "#285A50",
-    "surface": "#FFFFFF"
-  }
+  "name": "TaskNest",
+  "audience": "Students managing assignments and projects",
+  "archetype": "Caregiver",
+  "promise": "Keep your schoolwork organized in one place.",
+  "headline": "A little order. More room to breathe.",
+  "summary": "Meet TaskNest, a simple productivity app taking shape for students balancing assignments, projects and busy weeks.",
+  "voice": ["Supportive", "Clear", "Reliable"],
+  "design_direction": "Clean blue and white, generous spacing, clear headings and a simple nest-and-check SVG mark.",
+  "palette": {"ink": "#172D4D", "paper": "#F3F7FD", "accent": "#2357B5", "surface": "#FFFFFF"}
 }
