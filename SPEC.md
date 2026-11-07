@@ -7,9 +7,9 @@ actual evidence; pending is a valid state. Keep explanations/help in
 ## Current stage
 
 - **Current feature:** APP-001.
-- **Status:** Neutral foundation; learner scope and decisions pending.
-- **Next step:** Confirm the local clone and SSH origin, run setup and try the page.
-- **Implementation marker:** `studio.json` starts at `implemented_through: 0`.
+- **Status:** TaskNest homepage implemented; full APP-001 checks passed; learner inspection and keep decision received; evidence accuracy approved; GitHub cycle pending.
+- **Next step:** Publish the PR and verify both CI jobs before merging.
+- **Implementation marker:** `studio.json`: `implemented_through: 1` after full APP-001 checks passed.
 
 This repository owns application code. Server/proxy changes and production
 deployment are outside these three local-development lessons. Prepared helpers
@@ -23,10 +23,10 @@ Keep account actions honest about their unfinished state.
 
 | Decision | Agreement |
 |---|---|
-| Visitor and concrete use situation | Pending |
-| Reused IS117 brand, or name / promise / primary archetype | Pending |
-| One visible choice and visitor benefit | Pending |
-| Own issue / branch / PR | Pending |
+| Visitor and concrete use situation | Students managing assignments and projects |
+| Reused IS117 brand, or name / promise / primary archetype | TaskNest / schoolwork organized in one place / Caregiver |
+| One visible choice and visitor benefit | Clean blue/white design; learner predicts easier organization and lower stress. Learner found the headline and clean layout approachable and communicating less overwhelming schoolwork. |
+| Own issue / branch / PR | [Issue #1](https://github.com/FangzeW1/my-app-studio/issues/1) / `codex/app-001-tasknest` / [PR #2](https://github.com/FangzeW1/my-app-studio/pull/2) |
 
 **Keep when:** the agreed identity is visible and usable at desktop/narrow widths;
 full foundation + APP-001 checks pass; AI review and the learner's actual check
@@ -81,9 +81,19 @@ customer research or claims that a timestamp proves learning.
 
 | Feature | Files / own issue / PR | Actual checks and learner observations | Kept / GitHub state |
 |---|---|---|---|
-| APP-001 | Pending | Not run; learner contributions pending | Pending |
+| APP-001 | `app/brand.json`, homepage/base templates, shared CSS and SVG; [issue #1](https://github.com/FangzeW1/my-app-studio/issues/1), [PR #2](https://github.com/FangzeW1/my-app-studio/pull/2) | Both full APP-001 runs passed; desktop/narrow reviewed; learner interpretation, browser observation and keep reason in LEARNING.md | Keep and publication approved; CI/merge pending |
 | APP-002 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 | APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 
 The instructor's reference branches show possible implementations. They do not
 establish this repository's completion or the learner's own reasoning.
+
+### APP-001 working agreement
+
+- Identity: TaskNest, for students managing assignments and projects; promise: keep schoolwork organized in one place.
+- Primary archetype: Caregiver; supportive and reliable. Clean blue-and-white design and an original nest-and-check SVG mark.
+- Scope: homepage, copy, navigation and shared styles. Accounts, assignment tracking and project storage remain unavailable.
+- Issue: https://github.com/FangzeW1/my-app-studio/issues/1
+- Branch: `codex/app-001-tasknest`; PR: https://github.com/FangzeW1/my-app-studio/pull/2; CI/merge pending.
+- Files: `app/brand.json`, `app/templates/home.html`, `app/templates/base.html`, `app/static/site.css`, `app/static/logo.svg`.
+- Baseline: Black, Pylint, 98 non-browser tests and 2 Chromium journeys passed. Full APP-001: Black, Pylint, 98 foundation tests, 2 homepage contracts and 2 Chromium journeys passed. Desktop (1440px) and narrow (390px) renders reviewed without horizontal overflow; Learner described the approachable headline/blue-white design and accepted section-only navigation for APP-001; keep authorized. Evidence accuracy approved before publication.
