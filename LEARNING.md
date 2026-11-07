@@ -15,7 +15,7 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 - Keep decision: Learner paraphrase: Keep this implementation; the approachable design communicates the intended benefit and section-only buttons fit APP-001. Learner authorized the PR, CI checks and merge.
 - Review: Learner approved the presented excerpts for publication as accurate before commit/push, and requested that the prediction remain grounded in their actual words. The prediction paraphrases their earlier reply about finding work, assignment priorities, cleaner organization and lower stress.
 - Help/gaps: Learner chose TaskNest, student assignments/projects, an organization promise, Caregiver support/reliability and blue/white styling. AI wrote the homepage copy, SVG and styles. Prediction describes the intended app benefit; the homepage alone does not demonstrate organization or stress reduction. AI ran both full APP-001 check commands and reviewed desktop/narrow renders. Learner supplied the check interpretation, TaskNest browser observation and keep decision. Learner approved record accuracy. Verified PR/CI/merge remain pending.
-- Evidence links / next step: Issue https://github.com/FangzeW1/my-app-studio/issues/1; branch codex/app-001-tasknest. Both full APP-001 runs passed (98 foundation tests, 2 contracts, 2 Chromium journeys, Black and Pylint). Next: commit/push and verify PR/CI/merge.
+- Evidence links / next step: Issue https://github.com/FangzeW1/my-app-studio/issues/1; branch codex/app-001-tasknest. Both full APP-001 runs passed (98 foundation tests, 2 contracts, 2 Chromium journeys, Black and Pylint). Committed and pushed as 13d6b8b; PR https://github.com/FangzeW1/my-app-studio/pull/2. Next: verify both CI jobs and merge.
 
 ## APP-002
 
