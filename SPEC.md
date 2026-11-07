@@ -7,8 +7,8 @@ actual evidence; pending is a valid state. Keep explanations/help in
 ## Current stage
 
 - **Current feature:** APP-001.
-- **Status:** TaskNest homepage implemented; full APP-001 checks passed; learner inspection and keep decision received; evidence accuracy approved; GitHub cycle pending.
-- **Next step:** Publish the PR and verify both CI jobs before merging.
+- **Status:** TaskNest homepage implemented; full APP-001 checks passed; learner inspection and keep decision received; evidence accuracy approved; PR #2 merged and issue #1 closed; PR and main check/windows jobs passed.
+- **Next step:** Agree APP-002 scope after offering the next lesson.
 - **Implementation marker:** `studio.json`: `implemented_through: 1` after full APP-001 checks passed.
 
 This repository owns application code. Server/proxy changes and production
@@ -81,7 +81,7 @@ customer research or claims that a timestamp proves learning.
 
 | Feature | Files / own issue / PR | Actual checks and learner observations | Kept / GitHub state |
 |---|---|---|---|
-| APP-001 | `app/brand.json`, homepage/base templates, shared CSS and SVG; [issue #1](https://github.com/FangzeW1/my-app-studio/issues/1), [PR #2](https://github.com/FangzeW1/my-app-studio/pull/2) | Both full APP-001 runs passed; desktop/narrow reviewed; learner interpretation, browser observation and keep reason in LEARNING.md | Keep and publication approved; CI/merge pending |
+| APP-001 | `app/brand.json`, homepage/base templates, shared CSS and SVG; [issue #1](https://github.com/FangzeW1/my-app-studio/issues/1), [PR #2](https://github.com/FangzeW1/my-app-studio/pull/2) | Both full APP-001 runs passed; desktop/narrow reviewed; learner interpretation, browser observation and keep reason in LEARNING.md | Kept; PR #2 merged, issue #1 closed; PR and main check/windows passed |
 | APP-002 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 | APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 
@@ -94,6 +94,8 @@ establish this repository's completion or the learner's own reasoning.
 - Primary archetype: Caregiver; supportive and reliable. Clean blue-and-white design and an original nest-and-check SVG mark.
 - Scope: homepage, copy, navigation and shared styles. Accounts, assignment tracking and project storage remain unavailable.
 - Issue: https://github.com/FangzeW1/my-app-studio/issues/1
-- Branch: `codex/app-001-tasknest`; PR: https://github.com/FangzeW1/my-app-studio/pull/2; CI/merge pending.
+- Branch: `codex/app-001-tasknest`; PR: https://github.com/FangzeW1/my-app-studio/pull/2; merged as 71e1134; issue #1 closed.
 - Files: `app/brand.json`, `app/templates/home.html`, `app/templates/base.html`, `app/static/site.css`, `app/static/logo.svg`.
 - Baseline: Black, Pylint, 98 non-browser tests and 2 Chromium journeys passed. Full APP-001: Black, Pylint, 98 foundation tests, 2 homepage contracts and 2 Chromium journeys passed. Desktop (1440px) and narrow (390px) renders reviewed without horizontal overflow; Learner described the approachable headline/blue-white design and accepted section-only navigation for APP-001; keep authorized. Evidence accuracy approved before publication.
+
+- Verified APP-001 completion: latest PR CI https://github.com/FangzeW1/my-app-studio/actions/runs/42332653472 and merged-main CI https://github.com/FangzeW1/my-app-studio/actions/runs/42332849036 both passed check/windows. Local main pulled from origin after merge.
