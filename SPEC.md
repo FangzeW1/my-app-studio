@@ -67,7 +67,7 @@ permissions, including for an existing session after a role change.
 |---|---|
 | Intended admin-only result | A small admin-only permission confirmation page and API; anonymous users log in, members receive 403, admins allowed. Role changes only through trusted local CLI and effective for existing sessions. |
 | Actual allowed/denied request evidence | Isolated browser/API review: anonymous admin API 401; same logged-in session member 403, promoted admin 200, downgraded member 403. Trusted CLI used for role changes. |
-| Own issue / branch / PR | [Issue #5](https://github.com/FangzeW1/my-app-studio/issues/5) / `codex/app-003-roles` / PR pending |
+| Own issue / branch / PR | [Issue #5](https://github.com/FangzeW1/my-app-studio/issues/5) / `codex/app-003-roles` / [PR #6](https://github.com/FangzeW1/my-app-studio/pull/6) |
 
 **Keep when:** a direct request cannot bypass the role boundary, role changes
 take effect as specified, new signup remains member-only, and full cumulative
@@ -83,7 +83,7 @@ customer research or claims that a timestamp proves learning.
 |---|---|---|---|
 | APP-001 | `app/brand.json`, homepage/base templates, shared CSS and SVG; [issue #1](https://github.com/FangzeW1/my-app-studio/issues/1), [PR #2](https://github.com/FangzeW1/my-app-studio/pull/2) | Both full APP-001 runs passed; desktop/narrow reviewed; learner interpretation, browser observation and keep reason in LEARNING.md | Kept; PR #2 merged, issue #1 closed; PR and main check/windows passed |
 | APP-002 | `app/features/accounts.py`, `app/templates/account.html`, `app/templates/dashboard.html`; [issue #3](https://github.com/FangzeW1/my-app-studio/issues/3), branch `codex/app-002-accounts`, [PR #4](https://github.com/FangzeW1/my-app-studio/pull/4) | Full cumulative checks: Black/Pylint, 98 foundation tests, 14 contracts, 2 Chromium journeys passed. Desktop/narrow account pages reviewed; learner accessed Member space after login and was redirected to login after logout. | Kept; PR #4 merged; issue #3 closed; PR CI 42334872883 and main CI 42335008631 check/windows passed |
-| APP-003 | `app/features/roles.py`, `app/templates/admin.html`, shared CSS, `contracts/test_roles.py`; [issue #5](https://github.com/FangzeW1/my-app-studio/issues/5), branch `codex/app-003-roles` | Black/Pylint, 98 foundation tests, 19 cumulative contracts and 2 Chromium journeys passed. Actual denied/allowed desktop and 390px layouts reviewed, no horizontal overflow. | Learner observed same-session member/admin/member denial/allow/denial; keep/accuracy approved; PR/CI/merge pending |
+| APP-003 | `app/features/roles.py`, `app/templates/admin.html`, shared CSS, `contracts/test_roles.py`; [issue #5](https://github.com/FangzeW1/my-app-studio/issues/5), branch `codex/app-003-roles`, [PR #6](https://github.com/FangzeW1/my-app-studio/pull/6) | Black/Pylint, 98 foundation tests, 19 cumulative contracts and 2 Chromium journeys passed. Actual denied/allowed desktop and 390px layouts reviewed, no horizontal overflow. | Learner observed same-session member/admin/member denial/allow/denial; keep/accuracy approved; PR/CI/merge pending |
 
 The instructor's reference branches show possible implementations. They do not
 establish this repository's completion or the learner's own reasoning.
