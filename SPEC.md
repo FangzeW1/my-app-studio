@@ -6,10 +6,10 @@ actual evidence; pending is a valid state. Keep explanations/help in
 
 ## Current stage
 
-- **Current feature:** APP-001.
-- **Status:** TaskNest homepage implemented; full APP-001 checks passed; learner inspection and keep decision received; evidence accuracy approved; PR #2 merged and issue #1 closed; PR and main check/windows jobs passed.
-- **Next step:** Agree APP-002 scope after offering the next lesson.
-- **Implementation marker:** `studio.json`: `implemented_through: 1` after full APP-001 checks passed.
+- **Current feature:** APP-002.
+- **Status:** APP-001 kept and verified; APP-002 account flow implemented; full cumulative checks passed; learner inspection, keep and record accuracy approved; GitHub cycle pending.
+- **Next step:** Publish APP-002 PR; verify check/windows before merge and verify main afterward.
+- **Implementation marker:** APP-002 implemented (2) after full cumulative checks passed.
 
 This repository owns application code. Server/proxy changes and production
 deployment are outside these three local-development lessons. Prepared helpers
@@ -41,9 +41,9 @@ helpers; keep data local. New accounts cannot choose their role.
 
 | Decision | Agreement |
 |---|---|
-| Expected public/private behavior and account flow | Pending |
-| Valid and rejected cases to demonstrate | Pending |
-| Own issue / branch / PR | Pending |
+| Expected public/private behavior and account flow | Signup/login/private dashboard/logout; anonymous dashboard requests redirect to login, successful login grants access, logout revokes access. Prepared password hashing and session protections; storage excluded. |
+| Valid and rejected cases to demonstrate | Valid signup/login; duplicate or invalid signup, role injection, bad login, anonymous private access, missing CSRF and copied-token replay after logout rejected. |
+| Own issue / branch / PR | [Issue #3](https://github.com/FangzeW1/my-app-studio/issues/3) / `codex/app-002-accounts` / [PR #4](https://github.com/FangzeW1/my-app-studio/pull/4) |
 
 **Keep when:** the agreed forms/API work; duplicate/invalid signup and wrong
 credentials are rejected; passwords are hashed; authentication uses validated,
@@ -82,7 +82,7 @@ customer research or claims that a timestamp proves learning.
 | Feature | Files / own issue / PR | Actual checks and learner observations | Kept / GitHub state |
 |---|---|---|---|
 | APP-001 | `app/brand.json`, homepage/base templates, shared CSS and SVG; [issue #1](https://github.com/FangzeW1/my-app-studio/issues/1), [PR #2](https://github.com/FangzeW1/my-app-studio/pull/2) | Both full APP-001 runs passed; desktop/narrow reviewed; learner interpretation, browser observation and keep reason in LEARNING.md | Kept; PR #2 merged, issue #1 closed; PR and main check/windows passed |
-| APP-002 | Pending | Unfinished; explicit contracts not yet passed | Pending |
+| APP-002 | `app/features/accounts.py`, `app/templates/account.html`, `app/templates/dashboard.html`; [issue #3](https://github.com/FangzeW1/my-app-studio/issues/3), branch `codex/app-002-accounts`, [PR #4](https://github.com/FangzeW1/my-app-studio/pull/4) | Full cumulative checks: Black/Pylint, 98 foundation tests, 14 contracts, 2 Chromium journeys passed. Desktop/narrow account pages reviewed; learner accessed Member space after login and was redirected to login after logout. | Learner keep/accuracy approved; PR/CI/merge pending |
 | APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
 
 The instructor's reference branches show possible implementations. They do not

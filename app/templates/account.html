@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ 'Create account' if signup else 'Log in' }} · {{ brand.name }}{% endblock %}
+{% block content %}
+<section class="form-stack" aria-labelledby="account-title">
+  <p class="eyebrow">Your TaskNest account</p>
+  <h1 id="account-title">{{ 'Create account' if signup else 'Log in' }}</h1>
+  <p>{{ 'A small step toward your own member space.' if signup else 'Welcome back. Your member space is waiting.' }}</p>
+  {% if error %}<p role="alert">{{ error }}</p>{% endif %}
+  <form method="post" action="{{ '/signup' if signup else '/login' }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <label for="username">Username</label>
+    <input id="username" name="username" type="text" value="{{ username }}" minlength="{{ 3 if signup else 1 }}" maxlength="32" autocomplete="username" required {% if signup %}pattern="[a-zA-Z0-9_]{3,32}" aria-describedby="username-help"{% endif %}>
+    {% if signup %}<p id="username-help">Use 3–32 letters, numbers or underscores.</p>{% endif %}
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" minlength="{{ 15 if signup else 1 }}" maxlength="128" autocomplete="{{ 'new-password' if signup else 'current-password' }}" required {% if signup %}aria-describedby="password-help"{% endif %}>
+    {% if signup %}<p id="password-help">Use 15–128 characters. For this local project, choose a throwaway passphrase.</p>{% endif %}
+    <button class="button" type="submit">{{ 'Create account' if signup else 'Log in' }}</button>
+  </form>
+  <p>{% if signup %}Already have an account? <a href="/login">Log in</a>.{% else %}New here? <a href="/signup">Create account</a>.{% endif %}</p>
+</section>
+{% endblock %}

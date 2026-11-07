@@ -19,13 +19,13 @@ Accuracy approval is not proof of understanding. Label simulated trials explicit
 
 ## APP-002
 
-- Prediction: Pending.
-- Check interpretation: Pending.
-- Browser observation: Pending.
-- Keep decision: Pending.
-- Review: Pending.
-- Help/gaps: Pending.
-- Evidence links / next step: Keep APP-001 before agreeing this lesson.
+- Prediction: Learner paraphrase: Before login the dashboard should deny access and redirect to login; after successful login it should allow the authenticated user. Logout should prevent access until another login.
+- Check interpretation: Learner paraphrase: The replay test catches logout failing to invalidate the session and an old cookie still accessing private information. A 401 shows the copied cookie can no longer authenticate after logout.
+- Browser observation: Learner paraphrase: Created an account, logged in and accessed Member space. After logout, reopening Member space redirected to the login page.
+- Keep decision: Learner approved keeping APP-002 because the observed redirect demonstrates that logged-out users cannot access the private dashboard; authorized commit, PR, CI verification, merge and issue closure.
+- Review: Learner approved all presented APP-002 prediction, interpretation, observation, keep and help/gaps entries as accurate before publication.
+- Help/gaps: Learner approved signup/login/private dashboard/logout with prepared helpers, hashed passwords and no assignment storage. AI connected forms and API to prepared helpers and explained password hashing, signed expiring JWTs (signature is not encryption), HttpOnly cookies and server-side revocation. Learner interpreted the actual copied-cookie replay test. Learner completed browser inspection, approved keeping the result and approved the new record for publication. GitHub completion pending.
+- Evidence links / next step: Issue https://github.com/FangzeW1/my-app-studio/issues/3; branch codex/app-002-accounts. Full cumulative APP-002 checks passed: Black/Pylint, 98 foundation tests, 14 contracts and 2 Chromium journeys. AI reviewed actual signup/dashboard desktop/narrow renders with no horizontal overflow. Normal full recheck also passed; learner checkpoints completed and approved. PR https://github.com/FangzeW1/my-app-studio/pull/4; CI/merge pending.
 
 ## APP-003
 
