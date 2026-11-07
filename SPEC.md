@@ -6,10 +6,10 @@ actual evidence; pending is a valid state. Keep explanations/help in
 
 ## Current stage
 
-- **Current feature:** APP-002.
-- **Status:** APP-001 kept and verified; APP-002 account flow implemented; full cumulative checks passed; learner inspection, keep and record accuracy approved; GitHub cycle pending.
-- **Next step:** Publish APP-002 PR; verify check/windows before merge and verify main afterward.
-- **Implementation marker:** APP-002 implemented (2) after full cumulative checks passed.
+- **Current feature:** APP-003.
+- **Status:** APP-001 and APP-002 kept with verified merges/CI; APP-003 roles implemented; full cumulative checks passed; learner browser review, keep decision and evidence accuracy approved; GitHub cycle pending.
+- **Next step:** Publish APP-003 PR, verify latest check/windows, merge, then verify main and final submission state.
+- **Implementation marker:** APP-003 (3), advanced after full cumulative checks passed.
 
 This repository owns application code. Server/proxy changes and production
 deployment are outside these three local-development lessons. Prepared helpers
@@ -65,9 +65,9 @@ permissions, including for an existing session after a role change.
 
 | Decision | Agreement |
 |---|---|
-| Intended admin-only result | Pending |
-| Actual allowed/denied request evidence | Pending |
-| Own issue / branch / PR | Pending |
+| Intended admin-only result | A small admin-only permission confirmation page and API; anonymous users log in, members receive 403, admins allowed. Role changes only through trusted local CLI and effective for existing sessions. |
+| Actual allowed/denied request evidence | Isolated browser/API review: anonymous admin API 401; same logged-in session member 403, promoted admin 200, downgraded member 403. Trusted CLI used for role changes. |
+| Own issue / branch / PR | [Issue #5](https://github.com/FangzeW1/my-app-studio/issues/5) / `codex/app-003-roles` / [PR #6](https://github.com/FangzeW1/my-app-studio/pull/6) |
 
 **Keep when:** a direct request cannot bypass the role boundary, role changes
 take effect as specified, new signup remains member-only, and full cumulative
@@ -82,8 +82,8 @@ customer research or claims that a timestamp proves learning.
 | Feature | Files / own issue / PR | Actual checks and learner observations | Kept / GitHub state |
 |---|---|---|---|
 | APP-001 | `app/brand.json`, homepage/base templates, shared CSS and SVG; [issue #1](https://github.com/FangzeW1/my-app-studio/issues/1), [PR #2](https://github.com/FangzeW1/my-app-studio/pull/2) | Both full APP-001 runs passed; desktop/narrow reviewed; learner interpretation, browser observation and keep reason in LEARNING.md | Kept; PR #2 merged, issue #1 closed; PR and main check/windows passed |
-| APP-002 | `app/features/accounts.py`, `app/templates/account.html`, `app/templates/dashboard.html`; [issue #3](https://github.com/FangzeW1/my-app-studio/issues/3), branch `codex/app-002-accounts`, [PR #4](https://github.com/FangzeW1/my-app-studio/pull/4) | Full cumulative checks: Black/Pylint, 98 foundation tests, 14 contracts, 2 Chromium journeys passed. Desktop/narrow account pages reviewed; learner accessed Member space after login and was redirected to login after logout. | Learner keep/accuracy approved; PR/CI/merge pending |
-| APP-003 | Pending | Unfinished; explicit contracts not yet passed | Pending |
+| APP-002 | `app/features/accounts.py`, `app/templates/account.html`, `app/templates/dashboard.html`; [issue #3](https://github.com/FangzeW1/my-app-studio/issues/3), branch `codex/app-002-accounts`, [PR #4](https://github.com/FangzeW1/my-app-studio/pull/4) | Full cumulative checks: Black/Pylint, 98 foundation tests, 14 contracts, 2 Chromium journeys passed. Desktop/narrow account pages reviewed; learner accessed Member space after login and was redirected to login after logout. | Kept; PR #4 merged; issue #3 closed; PR CI 42334872883 and main CI 42335008631 check/windows passed |
+| APP-003 | `app/features/roles.py`, `app/templates/admin.html`, shared CSS, `contracts/test_roles.py`; [issue #5](https://github.com/FangzeW1/my-app-studio/issues/5), branch `codex/app-003-roles`, [PR #6](https://github.com/FangzeW1/my-app-studio/pull/6) | Black/Pylint, 98 foundation tests, 19 cumulative contracts and 2 Chromium journeys passed. Actual denied/allowed desktop and 390px layouts reviewed, no horizontal overflow. | Learner observed same-session member/admin/member denial/allow/denial; keep/accuracy approved; PR/CI/merge pending |
 
 The instructor's reference branches show possible implementations. They do not
 establish this repository's completion or the learner's own reasoning.
